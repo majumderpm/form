@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>responsive sibling form</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="blueBg">
+			<div class="box singin">
+				<h2>Alraedy Have an Account ?</h2>
+				<button class="singinBtn">Sing In</button>
+			</div>
+
+			<div class="box singup">
+				<h2>Don't Have an Account ?</h2>
+				<button class="singupBtn">Sing Up</button>
+			</div>
+		</div>
+		<div class="formBx">
+			<div class="form singinForm">
+				<form>
+					<h3>Sing In</h3>
+					<input type="text" name="" placeholder="Username">
+					<input type="password" name="" placeholder="Password">
+					<input type="submit" name="" value="Login">
+					<a href="#" class="forgot">Fortgot Password</a>
+				</form>
+			</div>
+			<div class="form singupForm">
+				<form>
+					<h3>Sing Up</h3>
+					<input type="text" name="" placeholder="Username">
+					<input type="text" name="" placeholder="Email Address">
+					<input type="password" name="" placeholder="Password">
+					<input type="password" name="" placeholder="Confirm Password">
+					<input type="submit" name="" value="Register">
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		const singinBtn = document.querySelector('.singinBtn');
+		const singupBtn = document.querySelector('.singupBtn');
+		const formBx = document.querySelector('.formBx');
+        const body = document.querySelector('body');
+
+		singupBtn.onclick = function(){
+			formBx.classList.add('active')
+	        body.classList.add('active')
+
+		}
+
+		singinBtn.onclick = function(){
+			formBx.classList.remove('active')
+			body.classList.remove('active')
+
+		}
+	</script>
+</body>
+</html>
